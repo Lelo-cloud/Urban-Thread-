@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import OrderSuccess from "./components/OrderSuccess";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -21,9 +22,9 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
-  <Route path="/" element={<Home />} />
+
+        <Route path="/" element={<Home />} />
 
   <Route path="/shop" element={<Shop />} />
 
@@ -59,6 +60,10 @@ function App() {
   }
 />
 </Routes>
+  
+
+      {/* 2. Global Footer */}
+      <Footer />
     </>
   );
 }
